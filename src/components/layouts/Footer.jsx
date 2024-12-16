@@ -82,10 +82,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
-
             </div >
-            <div style={{ height: "50vh" }}><h1>RC</h1></div>
         </>
     )
 }
