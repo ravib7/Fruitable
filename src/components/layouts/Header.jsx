@@ -29,7 +29,7 @@ const Header = () => {
             {/*-------------------- Navbar Section Start -------------------*/}
             <nav className="navbar navbar-expand-lg shadow sticky-top bg-white">
                 <div className="container">
-                    <Link to='/' className="navbar-brand fs-1 fw-bold" style={{ color: "#81c408" }} href="#">Fruitabless</Link>
+                    <Link to='/' className="navbar-brand fs-1 fw-bold" style={{ color: "#81c408" }} href="#">Fruitables</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
                         <span className="navbar-toggler-icon"></span>
                     </button>
