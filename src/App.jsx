@@ -8,6 +8,7 @@ import Chackout from './pages/Chackout'
 import Testimonial from './pages/Testimonial'
 import Page404 from './pages/Page404'
 import Contact from './pages/Contact'
+import 'swiper/css';
 
 const App = () => {
   return <div>

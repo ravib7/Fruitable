@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layouts/Layout'
 import '../../src/assets/styles/pages/Home.css';
 import hsImage1 from '/src/assets/img/hero-img-1.png'
@@ -6,6 +6,13 @@ import hsImage2 from '/src/assets/img/hero-img-2.jpg'
 
 
 const Home = () => {
+    useEffect(() => {
+        const carouselElement = document.querySelector('#carouselExampleControls');
+        const carouselInstance = new bootstrap.Carousel(carouselElement, {
+            interval: 3000,
+            ride: "carousel",
+        });
+    }, []);
 
     return (
         <>
@@ -26,22 +33,22 @@ const Home = () => {
                                 </div>
 
                                 <div className="col-md-12 col-lg-5 my-5">
-                                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
+                                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
+                                        <div className="carousel-inner">
+                                            <div className="carousel-item active">
                                                 <img src={hsImage1} className="d-block w-100 rounded-3" style={{ background: "#ffb524" }} alt="..." />
                                             </div>
                                             <div class="carousel-item">
                                                 <img src={hsImage2} class="d-block w-100 rounded-3" alt="..." />
                                             </div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span className="visually-hidden">Previous</span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
+                                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span className="visually-hidden">Next</span>
                                         </button>
                                     </div>
                                 </div>
