@@ -33,7 +33,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="col-md-12 col-lg-5 my-5">
-                                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
+                                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-touch="true">
                                         <div className="carousel-inner">
                                             <div className="carousel-item active">
                                                 <img src={hsImage1} className="d-block w-100 rounded-3" style={{ background: "#ffb524" }} alt="..." />
