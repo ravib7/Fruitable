@@ -40,7 +40,7 @@ const Header = () => {
                             <Link className='nav-link' to='/shopDetails'>Shop Detail</Link>
                             <li className="nav-item dropdown">
                                 <a className="nav-link" href="#" id="navbarDropdown" role="buton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pages <i className="bi bi-chevron-down"></i>
+                                    Pages <i class="fa-solid fa-chevron-down"></i>
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className='dropdown-item' to='/cart'>Cart</Link></li>

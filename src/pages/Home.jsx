@@ -26,7 +26,7 @@ const Home = () => {
                                 <div className="col-md-12 col-lg-7 my-5 hs-text">
                                     <h4 style={{ color: "#ffb524" }}>100% Organic Foods</h4>
                                     <p className='fw-bold display-3 mt-2 mb-5 ' style={{ color: "#81c408" }}>Organic Veggies & Fruits Foods</p>
-                                    <div className="input-group">
+                                    <div className="input-group hero-input">
                                         <input type="text" className="form-control px-4 py-3 rounded-start-pill" placeholder="Search" />
                                         <button className="btn fw-semibold rounded-pill px-4" style={{ border: "2px solid #ffb524" }} type="button">Subscribe Now</button>
                                     </div>

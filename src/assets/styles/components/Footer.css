@@ -25,7 +25,7 @@
     font-size: 17px;
     position: relative;
     left: -25px;
-    z-index: 10;
+    z-index: 5;
 }
 
 .input-group>.btn:hover {

@@ -16,7 +16,7 @@
     width: 90%;
 }
 
-.form-control {
+.hero-input>.form-control {
     border: 2px solid #ffb524 !important;
 }
 

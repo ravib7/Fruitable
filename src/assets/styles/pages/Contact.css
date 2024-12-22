@@ -1,0 +1,15 @@
+.form-control:focus,
+.btn:focus {
+    border: 3px solid #81c408;
+    border-color: #81c408 !important;
+    box-shadow: none !important;
+}
+
+.contact-form>.row>.col-md-12>.btn {
+    color: #81c408;
+}
+
+.contact-form>.row>.col-md-12>.btn:hover {
+    color: white;
+    background-color: #ffb524;
+}
