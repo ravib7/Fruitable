@@ -17,11 +17,11 @@ const Header = () => {
                     </a>
                 </div>
                 <div>
-                    <a href="#">Privacy Policy</a>
-                    <a className="m-2" href="#"> / </a>
-                    <a href="#">Terms of Use</a>
-                    <a className="m-2" href="#"> / </a>
-                    <a href="#">Sales and Refunds</a>
+                    <Link href="#">Privacy Policy</Link>
+                    <Link className="m-2" href="#"> / </Link>
+                    <Link href="#">Terms of Use</Link>
+                    <Link className="m-2" href="#"> / </Link>
+                    <Link href="#">Sales and Refunds</Link>
                 </div>
             </div>
             {/*-------------------- Top-Panel-Section-End -------------------*/}
@@ -51,7 +51,7 @@ const Header = () => {
                             </li>
                             <Link className='nav-link' to='/contact'>Contact</Link>
                         </div>
-                        <div className="icon py-sm-4">
+                        <div className="icon py-sm-4 mt-3 mt-md-0 mt-lg-0">
                             <i className="fa-solid fa-magnifying-glass serach-icon"></i>
                             <i className="fa-solid fa-bag-shopping mx-4 fs-2 text-color" style={{ color: "#81c408" }}></i>
                             <i className="fas fa-user fs-2 text-color" style={{ color: "#81c408" }}></i>

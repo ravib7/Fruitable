@@ -1,10 +1,11 @@
 import React from 'react'
-// import Navbar from '../components/Navbar'
+import Layout from '../components/layouts/Layout'
 
 const Cart = () => {
-    return <div>
-        {/* <Navbar></Navbar> */}
-    </div>
+    return <>
+        <Layout
+        ></Layout>
+    </>
 }
 
 export default Cart

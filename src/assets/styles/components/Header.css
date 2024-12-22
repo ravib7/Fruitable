@@ -12,6 +12,10 @@
     color: white;
 }
 
+.top-panel>div>a:hover {
+    color: #fdc148;
+}
+
 /*--------------- Top-Panel-Section-End ----------------*/
 
 /*--------------- Navbar-Section-Start --------------*/
