@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <>
-            <Layout>
+            <Layout >
                 {/*------------------ Hero-Section-Start ---------------*/}
 
                 <div className="hero-section">
@@ -58,7 +58,7 @@ const Home = () => {
                 </div >
 
                 {/*------------------ Hero-Section-End -----------------*/}
-            </Layout >
+            </Layout>
         </>
     )
 }
