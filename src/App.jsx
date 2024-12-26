@@ -12,8 +12,8 @@ import 'swiper/css';
 import { AdminLayout, PublicLayout } from '../src/admin/layout/AdminLayout'
 import AdminContact from './admin/pages/AdminContact'
 import AdminChackout from './admin/pages/AdminChackout'
-import Admin from './admin/pages/Admin'
-import DashBord from './admin/pages/DashBord'
+import Dashhome from './admin/pages/Dashhome'
+import AdminSignIn from './admin/pages/AdminSignIn'
 
 const App = () => {
 
@@ -31,11 +31,17 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
       </Route>
 
+      <Route>
+        <Route path='/signin' element={<AdminSignIn />} />
+      </Route>
+
       {/* Admin Header */}
       <Route path='/admin' element={<AdminLayout />}>
+        <Route index element={<Dashhome />} />
         <Route path="admincontact" element={<AdminContact />} />
         <Route path="admincheckout" element={<AdminChackout />} />
       </Route>
+
 
       <Route path='*' element={<h1>Page Not Found</h1>} />
     </Routes>

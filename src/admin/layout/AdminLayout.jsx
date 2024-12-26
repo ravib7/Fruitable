@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
-import Admin from "../pages/Admin"
+// import Admin from "../pages/Admin"
 import Header from "../../components/layouts/header"
+import Sidebar from "../pages/Dashboard"
 
 
 export const PublicLayout = () => {
@@ -11,7 +12,7 @@ export const PublicLayout = () => {
 }
 export const AdminLayout = () => {
     return <>
-        <Admin />
-        <Outlet />
+        <Sidebar />
+        {/* <Outlet /> */}
     </>
 }

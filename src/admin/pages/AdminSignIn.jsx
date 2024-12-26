@@ -1,12 +1,22 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
 import "/src/admin/assets/styles/Admin.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { useNavigate } from 'react-router-dom';
 
-const Admin = () => {
+const AdminSignIn = () => {
+
     const navigate = useNavigate();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(
+        localStorage.getItem("isLoggedIn") === "true"
+    );
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            localStorage.setItem("isLoggedIn", "true");
+            navigate("/signin");
+        }
+    }, [isLoggedIn, navigate]);
 
     const formik = useFormik({
         initialValues: {
@@ -23,19 +33,14 @@ const Admin = () => {
 
             if (values.username === validUsername && values.password === validPassword) {
                 setIsLoggedIn(true); // Hide the form
-                navigate("admincontact"); // Navigate to the contact page
+                navigate("/admin"); // Navigate to the contact page
             } else {
                 alert("Invalid username or password");
             }
             resetForm();
         }
     });
-
-    if (isLoggedIn) {
-        return null; // Render nothing when logged in
-    }
-
-    return (
+    return <>
         <div className="center-container">
             <div className="form-container">
                 <div className="form-header">
@@ -83,7 +88,7 @@ const Admin = () => {
                 </form>
             </div>
         </div>
-    );
-};
+    </>
+}
 
-export default Admin;
+export default AdminSignIn
