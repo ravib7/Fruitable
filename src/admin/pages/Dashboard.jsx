@@ -11,8 +11,8 @@ const Sidebar = () => {
     }
 
     return <>
-        <div className="row">
-            <div className="col-md-6 col-lg-6">
+        <div className="row gap-5 gap-md-5">
+            <div className="col-md-2 col-lg-2">
                 <div className="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{ width: '250px', height: '100vh' }}>
                     <a href="#" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-dark">
                         <span className="fs-4">Dashboard</span>
@@ -57,7 +57,7 @@ const Sidebar = () => {
                         </ul>
                     </div>
                 </div></div>
-            <div className="col-md-6 col-lg-6 my-5">
+            <div className="col-md-8 col-lg-9">
                 <Outlet />
             </div>
         </div>

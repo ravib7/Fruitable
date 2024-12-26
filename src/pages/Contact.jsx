@@ -3,7 +3,7 @@ import Layout from '../components/layouts/Layout'
 // import headerImg from '/src/assets/img/cart-page-header-img.jpg'
 import '../../src/assets/styles/pages/Contact.css';
 import { Link } from 'react-router-dom';
-import ContactForm from './ContactForm';
+import ContactForm from '../components/layouts/ContactForm';
 
 const Contact = () => {
     return <>
@@ -31,11 +31,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="contact-form my-5">
-                    <div className="row  px-5">
-                        <ContactForm />
-                    </div>
-                </div>
+                <ContactForm />
             </div>
         </Layout >
     </>
