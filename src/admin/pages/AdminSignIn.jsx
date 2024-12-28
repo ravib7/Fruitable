@@ -3,6 +3,7 @@ import "/src/admin/assets/styles/Admin.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AdminSignIn = () => {
 
@@ -32,10 +33,11 @@ const AdminSignIn = () => {
             const validPassword = "123"; // Replace with your desired password
 
             if (values.username === validUsername && values.password === validPassword) {
+                toast.success("Sign In Successfully")
                 setIsLoggedIn(true); // Hide the form
                 navigate("/admin"); // Navigate to the contact page
             } else {
-                alert("Invalid username or password");
+                toast.error("Invalid username or password")
             }
             resetForm();
         }

@@ -14,10 +14,13 @@ import AdminContact from './admin/pages/AdminContact'
 import AdminChackout from './admin/pages/AdminChackout'
 import Dashhome from './admin/pages/Dashhome'
 import AdminSignIn from './admin/pages/AdminSignIn'
+import { ToastContainer } from 'react-toastify'
+import "react-toastify/ReactToastify.css"
 
 const App = () => {
 
   return <div>
+    <ToastContainer />
     <Routes>
       {/* Public Header */}
       <Route path='/' element={<PublicLayout />}>

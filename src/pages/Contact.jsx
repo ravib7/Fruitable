@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layouts/Layout'
 // import headerImg from '/src/assets/img/cart-page-header-img.jpg'
-import '../../src/assets/styles/pages/Contact.css';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/layouts/ContactForm';
 

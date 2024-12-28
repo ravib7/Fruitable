@@ -1,13 +1,22 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
-import { useEffect, useState } from 'react'
 import * as yup from "yup"
+import clsx from 'clsx'
+import { toast } from "react-toastify"
+import '../../assets/styles/components/ContactForm.css';
 
 const ContactForm = () => {
+
+    const handleClasses = key => clsx({
+        "form-control py-3 rounded-3": true,
+        "is-invalid": formik.touched[key] && formik.errors[key],
+        "is-valid": formik.touched[key] && !formik.errors[key],
+    })
 
     const createContact = async () => {
         await axios.post("http://localhost:5000/contact", formik.values)
         // readContact()
+        toast.success("Form Submited Successfully")
     }
 
     const formik = useFormik({
@@ -28,21 +37,26 @@ const ContactForm = () => {
     })
 
 
-
     return <>
         <form onSubmit={formik.handleSubmit}>
             <div className="contact-form my-5">
                 <div className="row px-5">
                     <div className="col-md-12 col-lg-7">
                         <div class="input-group">
-                            <input {...formik.getFieldProps("name")} type="text" class="form-control py-3 rounded-3" placeholder='Enter Your Name' />
+                            <input className={handleClasses("name")}   {...formik.getFieldProps("name")} type="text" placeholder='Enter Your Name' />
                         </div>
+                        <div className="valid-feedback">Looks good!</div>
+                        <div className="invalid-feedback">{formik.errors.name}</div>
                         <div class="input-group my-3">
-                            <input {...formik.getFieldProps("email")} type="email" class="form-control py-3 rounded-3" placeholder='Enter Your Emaill' />
+                            <input className={handleClasses("email")}  {...formik.getFieldProps("email")} type="email" placeholder='Enter Your Emaill' />
                         </div>
+                        <div className="valid-feedback">Looks good!</div>
+                        <div className="invalid-feedback">{formik.errors.email}</div>
                         <div class="input-group">
-                            <textarea {...formik.getFieldProps("message")} class="form-control py-5 rounded-3" placeholder='Your Message'></textarea>
+                            <textarea className={handleClasses("message")} rows={5} cols={10} {...formik.getFieldProps("message")} placeholder='Your Message'></textarea>
                         </div>
+                        <div className="valid-feedback">Looks good!</div>
+                        <div className="invalid-feedback">{formik.errors.message}</div>
                         <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button>
                     </div>
                     <div className="col-md-12 col-lg-5 mb-5">

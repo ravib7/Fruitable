@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 
 const AdminContact = () => {
 
@@ -14,7 +15,7 @@ const AdminContact = () => {
 
     const deletContact = async id => {
         axios.delete("http://localhost:5000/contact/" + id)
-        alert("Information Deleted Successfully")
+        toast.success("Information Deleted Successfully")
         readContact()
     }
 
@@ -24,7 +25,7 @@ const AdminContact = () => {
     ])
 
     return <>
-        <table className="table table-bordered table-hover mt-5">
+        <table className="table table-bordered table-hover mt-5 ms-md-5">
             <thead className="text-center">
                 <tr>
                     <th>Name</th>
@@ -40,7 +41,7 @@ const AdminContact = () => {
                         <td>{item.email}</td>
                         <td>{item.message}</td>
                         <td>
-                            <button className="btn btn-warning me-3">
+                            <button className="btn btn-warning me-3 mb-md-2">
                                 <i className="fas fa-edit"></i>
                             </button>
                             <button
