@@ -16,6 +16,7 @@ import Dashhome from './admin/pages/Dashhome'
 import AdminSignIn from './admin/pages/AdminSignIn'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/ReactToastify.css"
+import ProtectedRoute from './admin/pages/ProtectedRoutes'
 
 const App = () => {
 
@@ -39,7 +40,13 @@ const App = () => {
       </Route>
 
       {/* Admin Header */}
-      <Route path='/admin' element={<AdminLayout />}>
+      <Route path='/admin'
+        element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route index element={<Dashhome />} />
         <Route path="admincontact" element={<AdminContact />} />
         <Route path="admincheckout" element={<AdminChackout />} />

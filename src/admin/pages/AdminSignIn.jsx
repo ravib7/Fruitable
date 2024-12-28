@@ -15,7 +15,7 @@ const AdminSignIn = () => {
     useEffect(() => {
         if (isLoggedIn) {
             localStorage.setItem("isLoggedIn", "true");
-            navigate("/signin");
+            navigate("/admin");
         }
     }, [isLoggedIn, navigate]);
 
