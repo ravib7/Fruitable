@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "../../admin/assets/styles/Dashboard.css"
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
 
@@ -21,14 +21,28 @@ const Sidebar = () => {
                     <hr />
                     <ul className="nav nav-pills flex-column mb-auto">
                         <li>
-                            <Link to="admincontact" className="nav-link bg-primary text-light active">
+                            <NavLink
+                                to="admincontact"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "nav-link bg-primary text-light active"
+                                        : "nav-link text-dark"
+                                }
+                            >
                                 Contact Page
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="admincheckout" className="nav-link text-dark">
+                            <NavLink
+                                to="admincheckout"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "nav-link bg-primary text-light active"
+                                        : "nav-link text-dark"
+                                }
+                            >
                                 Checkout Page
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                     <hr />
@@ -40,7 +54,6 @@ const Sidebar = () => {
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-
                             <i className="fa-solid fa-user fs-5 me-3"></i>
                             <strong>Admin</strong>
                         </a>
