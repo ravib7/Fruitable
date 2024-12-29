@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import * as yup from "yup"
 import clsx from 'clsx'
 import { toast } from "react-toastify"
-import '../../assets/styles/components/ContactForm.css';
+import '../assets/styles/components/ContactForm.css';
 
 const ContactForm = () => {
 

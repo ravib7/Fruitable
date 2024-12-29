@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layouts/Layout'
 // import headerImg from '/src/assets/img/cart-page-header-img.jpg'
 import { Link } from 'react-router-dom';
-import ContactForm from '../components/layouts/ContactForm';
+import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
     return <>
