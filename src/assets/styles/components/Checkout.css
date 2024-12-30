@@ -1,0 +1,16 @@
+.form-control:focus,
+.btn:focus {
+    border: 3px solid #81c408;
+    opacity: 0.5;
+    border-color: #81c408 !important;
+    box-shadow: none !important;
+}
+
+.checkout-btn {
+    color: #81c408;
+}
+
+.checkout-btn:hover {
+    color: white;
+    background-color: #ffb524;
+}
