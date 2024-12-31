@@ -1,28 +1,25 @@
 {
   "contact": [
     {
-      "name": "John Doe",
-      "email": "john@gmail.com",
-      "message": "Hii",
-      "id": 2
-    },
-    {
-      "name": "Sarvesh",
-      "email": "sarvesh@gmail.com",
-      "message": "Hii",
-      "id": 5
-    },
-    {
-      "name": "Shubham ",
-      "email": "Shubham@gmail.com",
-      "message": "Hii",
-      "id": 6
-    },
-    {
       "name": "Ravindra Balu Chaudhari",
       "email": "ravibchaudhari7@gmail.com",
       "message": "Hii",
-      "id": 7
+      "id": 1
+    }
+  ],
+  "checkout": [
+    {
+      "fname": "Ravindra",
+      "lname": "Chaudhari",
+      "cname": "Chaudhari Industry",
+      "address": "Swastik Negar",
+      "city": "Sambhaji Neagar",
+      "country": "India",
+      "pcode": "431001",
+      "mobile": "8265025800",
+      "email": "ravibchaudhari7@gmail.com",
+      "notes": "Hii",
+      "id": 1
     }
   ]
 }

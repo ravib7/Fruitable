@@ -4,7 +4,6 @@ import CheckoutForm from '../components/CheckoutForm'
 import Brocoli from "../assets/img/vegetable-item-2.jpg"
 import Potatoes from "../assets/img/vegetable-item-5.jpg"
 import Banana from "../assets/img/vegetable-item-3.png"
-import "../assets/styles/components/Checkout.css"
 
 const Chackout = () => {
     return <>
@@ -112,8 +111,6 @@ const Chackout = () => {
                             Paypal
                         </label>
                     </div>
-                    <hr />
-                    <button className="checkout-btn btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524", }} type="submit">PLACE ORDER</button>
                 </div>
             </div >
         </Layout >

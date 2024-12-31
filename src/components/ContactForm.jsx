@@ -4,8 +4,11 @@ import * as yup from "yup"
 import clsx from 'clsx'
 import { toast } from "react-toastify"
 import '../assets/styles/components/ContactForm.css';
+import { useState } from 'react'
 
 const ContactForm = () => {
+
+    const [editData, setEditData] = useState()
 
     const handleClasses = key => clsx({
         "form-control py-3 rounded-3": true,
@@ -21,9 +24,9 @@ const ContactForm = () => {
 
     const formik = useFormik({
         initialValues: {
-            name: "",
-            email: "",
-            message: ""
+            name: editData ? editData.name : "",
+            email: editData ? editData.email : "",
+            message: editData ? editData.message : ""
         },
         validationSchema: yup.object({
             name: yup.string().required("Enter Name"),
@@ -31,6 +34,9 @@ const ContactForm = () => {
             message: yup.string().required("Enter Message"),
         }),
         onSubmit: (values, { resetForm }) => {
+            if (editData) {
+
+            }
             createContact()
             resetForm()
         }

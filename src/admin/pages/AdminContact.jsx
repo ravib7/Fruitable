@@ -41,9 +41,9 @@ const AdminContact = () => {
                         <td>{item.email}</td>
                         <td>{item.message}</td>
                         <td>
-                            {/* <button className="btn btn-warning me-3 mb-md-2">
+                            <button className="btn btn-warning me-3 mb-md-2">
                                 <i className="fas fa-edit"></i>
-                            </button> */}
+                            </button>
                             <button
                                 onClick={() => deletContact(item.id)}
                                 className="btn btn-danger me-3"
