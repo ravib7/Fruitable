@@ -1,76 +1,80 @@
 import React, { useEffect } from 'react';
-import "../../admin/assets/styles/Dashboard.css"
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 
-const Sidebar = () => {
-
+const Navbar = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
         localStorage.removeItem("isLoggedIn");
         navigate("/admin");
-    }
+    };
 
-    return <>
-        <div className="row gap-md-5 gap-lg-0">
-            <div className="col-md-2 col-lg-2">
-                <div className="d-flex flex-column flex-shrink-0 p-3 bg-light shadow" style={{ width: '215px', height: '100vh' }}>
-                    <a href="#" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-dark">
-                        <span className="fs-4 text-primary fw-semibold">Admin Panel</span>
-                    </a>
-                    <hr />
-                    <ul className="nav nav-pills flex-column mb-auto">
-                        <li>
-                            <NavLink
-                                to="admincontact"
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? "nav-link bg-primary text-light active"
-                                        : "nav-link text-dark"
-                                }
-                            >
-                                Contact Page
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="admincheckout"
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? "nav-link bg-primary text-light active"
-                                        : "nav-link text-dark"
-                                }
-                            >
-                                Checkout Page
-                            </NavLink>
-                        </li>
-                    </ul>
-                    <hr />
-                    <div className="dropdown">
-                        <a
-                            href="#"
-                            className="d-flex align-items-center text-decoration-none dropdown-toggle"
-                            id="dropdownUser1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <i className="fa-solid fa-user fs-5 me-3"></i>
-                            <strong>Admin</strong>
-                        </a>
-                        <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
-                            <li>
-                                <Link to="/" className="dropdown-item" href="#" onClick={handleLogout}>
-                                    Sign out
-                                </Link>
+    return (
+        <div>
+            {/* Navbar */}
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container">
+                    <Link className="navbar-brand" to="#">
+                        <span className="fs-4 fw-semibold">Admin Panel</span>
+                    </Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav mx-auto gap-md-0 gap-lg-4">
+                            <li className="nav-item my-md-3 my-lg-0">
+                                <NavLink
+                                    to="admincontact"
+                                    className={({ isActive }) =>
+                                        isActive ? "nav-link bg-primary text-light rounded-3 px-md-2" : "nav-link text-light"
+                                    }
+                                >
+                                    <i className="fa fa-address-book me-2"></i>
+                                    Contact Page
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink
+                                    to="admincheckout"
+                                    className={({ isActive }) =>
+                                        isActive ? "nav-link bg-primary text-light rounded-3 px-md-2" : "nav-link text-light"
+                                    }
+                                >
+                                    <i className="fa fa-shopping-cart me-2"></i>
+                                    Checkout Page
+                                </NavLink>
                             </li>
                         </ul>
+                        <div className='my-md-3 my-lg-0'>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link bg-primary text-light" : "nav-link text-light"
+                                }
+                                onClick={handleLogout}
+                            >
+                                <i className="fa fa-sign-out-alt fs-5 me-2"></i>
+                                Sign Out
+                            </NavLink>
+                        </div>
                     </div>
-                </div></div>
-            <div className="col-md-8 col-lg-9">
+                </div>
+            </nav>
+
+            {/* Outlet for content */}
+            <div className="container-fluid">
                 <Outlet />
             </div>
         </div>
-    </>
+    );
 };
 
-export default Sidebar;
+export default Navbar;

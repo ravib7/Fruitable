@@ -25,7 +25,7 @@ const AdminContact = () => {
     ])
 
     return <>
-        <table className="table table-bordered table-hover mt-5 ms-md-5">
+        <table className="table table-bordered table-hover mt-5">
             <thead className="text-center">
                 <tr>
                     <th>Name</th>
