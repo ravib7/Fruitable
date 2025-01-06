@@ -7,23 +7,17 @@
       "id": 1
     },
     {
-      "name": "Ravindra Balu Chaudhari",
-      "email": "ravibchaudhari7@gmail.com",
+      "name": "ethan",
+      "email": "ethan@gmail.com",
       "message": "Hii",
       "id": 2
-    },
-    {
-      "name": "Ravindra Balu Chaudhari",
-      "email": "ravibchaudhari7@gmail.com",
-      "message": "Hii",
-      "id": 3
     }
   ],
   "checkout": [
     {
       "fname": "Ravindra",
       "lname": "Chaudhari",
-      "cname": "Chaudhari Industry",
+      "cname": "RC Industry",
       "address": "Swastik Negar",
       "city": "Sambhaji Neagar",
       "country": "India",

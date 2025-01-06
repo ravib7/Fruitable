@@ -4,11 +4,12 @@ import * as yup from "yup"
 import clsx from 'clsx'
 import { toast } from "react-toastify"
 import '../assets/styles/components/ContactForm.css';
-import { useState } from 'react'
+import { useContext } from 'react'
+import { AuthContext } from '../App'
 
 const ContactForm = () => {
 
-    const [editData, setEditData] = useState()
+    const { editData, updateContact } = useContext(AuthContext)
 
     const handleClasses = key => clsx({
         "form-control py-3 rounded-3": true,
@@ -23,6 +24,7 @@ const ContactForm = () => {
     }
 
     const formik = useFormik({
+        enableReinitialize: true,
         initialValues: {
             name: editData ? editData.name : "",
             email: editData ? editData.email : "",
@@ -35,13 +37,13 @@ const ContactForm = () => {
         }),
         onSubmit: (values, { resetForm }) => {
             if (editData) {
-
+                updateContact(values, resetForm)
+            } else {
+                createContact();
+                resetForm();
             }
-            createContact()
-            resetForm()
         }
     })
-
 
     return <>
         <form onSubmit={formik.handleSubmit}>
@@ -63,7 +65,18 @@ const ContactForm = () => {
                         </div>
                         <div className="valid-feedback">Looks good!</div>
                         <div className="invalid-feedback">{formik.errors.message}</div>
-                        <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button>
+
+                        {
+                            editData
+                                ? <>
+                                    <button type="submit" class="btn btn-warning">Update Blogs</button>
+                                </>
+                                : <>
+                                    <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button>
+                                </>
+                        }
+
+                        {/* <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button> */}
                     </div>
                     <div className="col-md-12 col-lg-5 mb-5">
                         <div class="card rounded-3">
