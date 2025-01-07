@@ -1,9 +1,14 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import React, { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../../App'
+import { useNavigate } from 'react-router-dom'
 
 const AdminChackout = () => {
 
+    const { setCheditData } = useContext(AuthContext)
     const [checkout, setCheckout] = useState([])
+    const navigate = useNavigate()
 
     const readCheckout = async () => {
         const { data } = await axios.get("http://localhost:5000/checkout")
@@ -12,14 +17,13 @@ const AdminChackout = () => {
 
     const deleteCheckout = async id => {
         axios.delete("http://localhost:5000/checkout/" + id)
-        toast.success("Deleted Suucessfully")
+        toast.success("Information Deleted Successfully")
         readCheckout()
     }
 
-    useEffect(() => { }, [
+    useEffect(() => {
         readCheckout()
-
-    ])
+    }, [])
 
     return <>
         <div className="row">
@@ -55,7 +59,10 @@ const AdminChackout = () => {
                                 <td>{item.email}</td>
                                 <td>{item.notes}</td>
                                 <td>
-                                    <button className="btn btn-warning me-3 mb-md-2">
+                                    <button onClick={() => {
+                                        setCheditData(item);
+                                        navigate('/chackout');
+                                    }} className="btn btn-warning me-3 mb-3 mb-md-0">
                                         <i className="fas fa-edit"></i>
                                     </button>
                                     <button

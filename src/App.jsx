@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
-import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
+import React, { createContext, CheckoutContext, useEffect, useState } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import ShopDetails from './pages/ShopDetails'
@@ -25,6 +25,7 @@ const App = () => {
 
   const navigate = useNavigate()
   const [editData, setEditData] = useState()
+  const [cheditData, setCheditData] = useState()
 
   const updateContact = async (values, resetForm) => {
     if (editData) {
@@ -40,8 +41,23 @@ const App = () => {
     }
   };
 
+
+  const updateCheckout = async (values, resetForm) => {
+    if (cheditData) {
+      await axios.patch(`http://localhost:5000/checkout/${cheditData.id}`, values);
+      toast.success("Updated Successfully");
+      setCheditData(null);
+      resetForm();
+      navigate("./admin/admincheckout")
+      readCheckout();
+    } else {
+      toast.error("Failed to update the contact");
+      console.error(error);
+    }
+  };
+
   return <div>
-    <AuthContext.Provider value={{ editData, setEditData, updateContact }}>
+    <AuthContext.Provider value={{ editData, setEditData, updateContact, updateCheckout, setCheditData, cheditData }}>
       <ToastContainer />
       <Routes>
         {/* Public Header */}

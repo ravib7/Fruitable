@@ -1,9 +1,9 @@
-import axios from 'axios'
-import { useFormik } from 'formik'
 import * as yup from "yup"
 import clsx from 'clsx'
-import { toast } from "react-toastify"
+import axios from 'axios'
 import '../assets/styles/components/ContactForm.css';
+import { toast } from "react-toastify"
+import { useFormik } from 'formik'
 import { useContext } from 'react'
 import { AuthContext } from '../App'
 
@@ -76,7 +76,6 @@ const ContactForm = () => {
                                 </>
                         }
 
-                        {/* <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button> */}
                     </div>
                     <div className="col-md-12 col-lg-5 mb-5">
                         <div class="card rounded-3">
