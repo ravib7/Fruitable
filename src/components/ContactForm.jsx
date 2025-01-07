@@ -9,7 +9,7 @@ import { AuthContext } from '../App'
 
 const ContactForm = () => {
 
-    const { editData, updateContact } = useContext(AuthContext)
+    const { editData, updateContact, setEditData } = useContext(AuthContext)
 
     const handleClasses = key => clsx({
         "form-control py-3 rounded-3": true,
@@ -69,7 +69,7 @@ const ContactForm = () => {
                         {
                             editData
                                 ? <>
-                                    <button type="submit" class="btn btn-warning">Update Blogs</button>
+                                    <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Update</button>
                                 </>
                                 : <>
                                     <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Submit</button>

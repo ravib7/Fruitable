@@ -23,9 +23,8 @@ export const AuthContext = createContext()
 
 const App = () => {
 
-
-  const [editData, setEditData] = useState()
   const navigate = useNavigate()
+  const [editData, setEditData] = useState()
 
   const updateContact = async (values, resetForm) => {
     if (editData) {
@@ -33,8 +32,8 @@ const App = () => {
       toast.success("Updated Successfully");
       setEditData(null);
       resetForm();
+      navigate("./admin/admincontact")
       readContact();
-
     } else {
       toast.error("Failed to update the contact");
       console.error(error);
