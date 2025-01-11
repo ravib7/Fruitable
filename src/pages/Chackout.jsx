@@ -61,21 +61,21 @@ const Chackout = () => {
                         </div>
                         <div className="col-md-6 col-lg-10">
                             <span className='ms-5'>
-                                <input class="form-check-input" type="checkbox" value="" id="id" />
+                                <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                                 <label class="form-check-label ms-2" for="id">
-                                    <h6 className='fw-light'>Free Shipping</h6>
+                                    <p>Free Shipping</p>
                                 </label>
                             </span>
                             <div className='ms-5'>
-                                <input class="form-check-input" type="checkbox" value="" id="id" />
+                                <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                                 <label class="form-check-label ms-2" for="id">
-                                    <h6 className='fw-light'>Flat rate: $15.00 </h6>
+                                    <p>Flat rate: $15.00 </p>
                                 </label>
                             </div>
                             <div className='ms-5'>
-                                <input class="form-check-input" type="checkbox" value="" id="id" />
+                                <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                                 <label class="form-check-label ms-2" for="id">
-                                    <h6 className='fw-light'>Local Pickup: $8.00</h6>
+                                    <p>Local Pickup: $8.00</p>
                                 </label>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ const Chackout = () => {
                     <h5 className='ms-5 py-5'>TOTAL <span className='ms-4'>₹1000</span></h5>
                     <hr />
                     <div class="form-check ms-4 py-4">
-                        <input class="form-check-input" type="checkbox" value="" id="id" />
+                        <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                         <label class="form-check-label" for="id">
                             Direct Bank Transfer
                         </label>
@@ -92,21 +92,21 @@ const Chackout = () => {
                     </div>
                     <hr />
                     <div class="form-check ms-4 my-5">
-                        <input class="form-check-input" type="checkbox" value="" id="id" />
+                        <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                         <label class="form-check-label" for="id">
                             Check Payments
                         </label>
                     </div>
                     <hr />
                     <div class="form-check ms-4 my-5">
-                        <input class="form-check-input" type="checkbox" value="" id="id" />
+                        <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                         <label class="form-check-label" for="id">
                             Cash On Delivery
                         </label>
                     </div>
                     <hr />
                     <div class="form-check ms-4 my-5">
-                        <input class="form-check-input" type="checkbox" value="" id="id" />
+                        <input class="form-check-input" style={{ backgroundColor: "#81c408" }} type="checkbox" value="" id="id" />
                         <label class="form-check-label" for="id">
                             Paypal
                         </label>

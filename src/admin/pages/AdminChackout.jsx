@@ -62,12 +62,12 @@ const AdminChackout = () => {
                                     <button onClick={() => {
                                         setCheditData(item);
                                         navigate('/chackout');
-                                    }} className="btn btn-warning me-3 mb-3 mb-md-0">
+                                    }} className="btn btn-warning mb-2">
                                         <i className="fas fa-edit"></i>
                                     </button>
                                     <button
                                         onClick={() => deleteCheckout(item.id)}
-                                        className="btn btn-danger me-3"
+                                        className="btn btn-danger"
                                     >
                                         <i className="fa-solid fa-trash"></i>
                                     </button>
