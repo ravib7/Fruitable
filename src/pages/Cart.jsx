@@ -51,7 +51,7 @@ const Cart = () => {
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col" className='d-none  d-md-inline-flex'>Handle</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,7 +70,7 @@ const Cart = () => {
                                     </td>
                                     <td className='py-4'>₹130</td>
                                     <td className='py-3'>
-                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2"></i>
+                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2 d-none  d-md-inline-flex"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -88,7 +88,7 @@ const Cart = () => {
                                     </td>
                                     <td className='py-4'>₹50</td>
                                     <td className='py-3'>
-                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2"></i>
+                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2 d-none  d-md-inline-flex"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -106,7 +106,7 @@ const Cart = () => {
                                     </td>
                                     <td className='py-4'>₹55</td>
                                     <td className='py-3'>
-                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2"></i>
+                                        <i class="bi bi-x fs-4 shadow-sm text-danger mt-2 d-none d-md-inline-flex"></i>
                                     </td>
                                 </tr>
                             </tbody>
