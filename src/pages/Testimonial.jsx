@@ -1,9 +1,11 @@
-import React from 'react'
 import Layout from '../components/layouts/Layout'
+import TestimonialCard from '../components/TestimonialCard'
 
 const Testimonial = () => {
     return <>
-        <Layout></Layout>
+        <Layout>
+            <TestimonialCard />
+        </Layout>
     </>
 }
 
