@@ -142,10 +142,10 @@ const CheckoutForm = () => {
             {
                 cheditData
                     ? <>
-                        <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Update</button>
+                        <button className="btn checkout-btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">Update</button>
                     </>
                     : <>
-                        <button className="btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">PLACE ORDER</button>
+                        <button className="btn checkout-btn fw-semibold px-4 py-3 my-3 w-100 rounded-3" style={{ border: "1px solid #ffb524" }} type="submit">PLACE ORDER</button>
                     </>
             }
         </form>

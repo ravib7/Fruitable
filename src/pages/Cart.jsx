@@ -16,7 +16,7 @@ const Cart = () => {
     }
     const decrees = () => {
         if (incressQuantity > 0) {
-            setIncressQuantity(addQuantity - 1)
+            setIncressQuantity(incressQuantity - 1)
         }
     }
 
