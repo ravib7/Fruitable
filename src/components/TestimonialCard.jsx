@@ -11,15 +11,12 @@ const TestimonialCard = () => {
 
     useEffect(() => {
         const carouselElement = document.querySelector('#carouselExampleControls');
-        if (carouselElement) {
-            const carouselInstance = new bootstrap.Carousel(carouselElement, {
-                interval: 10000,
-                ride: "carousel",
-            });
-        } else {
-            console.error("Carousel element not found in the DOM.");
-        }
+        const carouselInstance = new bootstrap.Carousel(carouselElement, {
+            interval: 5000,
+            ride: "carousel",
+        });
     }, []);
+
 
     return <>
         <div className='my-5 text-center'>
@@ -39,7 +36,7 @@ const TestimonialCard = () => {
         </div>
 
         <div className="container my-5">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-touch="true">
+            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div className="row">
